@@ -4,7 +4,12 @@ class CardWidget extends StatelessWidget {
   final String title;
   final String subtitle;
   final String bodyText;
-  const CardWidget({super.key, required this.title, required this.subtitle, required this.bodyText});
+
+  const CardWidget(
+      {super.key,
+      required this.title,
+      required this.subtitle,
+      required this.bodyText});
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +25,7 @@ class CardWidget extends StatelessWidget {
           // Header
           ListTile(
             leading: Icon(Icons.person, size: 50),
-            title: Text(title,
-                style: TextStyle(fontWeight: FontWeight.bold)),
+            title: Text(title, style: TextStyle(fontWeight: FontWeight.bold)),
             subtitle: Text(subtitle),
           ),
           // Body
