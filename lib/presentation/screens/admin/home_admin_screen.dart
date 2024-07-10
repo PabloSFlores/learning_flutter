@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 class HomeAdminScreen extends StatefulWidget {
+
   final String name;
+
   const HomeAdminScreen({super.key, required this.name});
+
   @override
-  _HomeAdminScreenState.createState() => _HomeAdminScreenState();
+  _HomeAdminScreenState createState() => _HomeAdminScreenState();
+
 }
 
 class _HomeAdminScreenState extends State<HomeAdminScreen> {
@@ -30,7 +34,7 @@ class _HomeAdminScreenState extends State<HomeAdminScreen> {
       appBar: AppBar(
         title: Text('Home Admin'),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Home Admin'),
       ), // Center
     ); // Scaffold
