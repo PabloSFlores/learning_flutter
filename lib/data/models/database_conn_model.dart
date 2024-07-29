@@ -1,4 +1,5 @@
 class DatabaseConnModel {
+  final int id;
   final String username;
   final String password;
   final String host;
@@ -7,6 +8,7 @@ class DatabaseConnModel {
   final String url;
 
   DatabaseConnModel({
+    required this.id,
     required this.username,
     required this.password,
     required this.host,
@@ -17,6 +19,7 @@ class DatabaseConnModel {
 
   factory DatabaseConnModel.fromJson(Map<String, dynamic> json) {
     return DatabaseConnModel(
+      id: json['id'],
       username: json['username'],
       password: json['password'],
       host: json['host'],
@@ -28,6 +31,7 @@ class DatabaseConnModel {
 
   Map<String, dynamic> toJson() {
     return {
+      'id': id,
       'username': username,
       'password': password,
       'host': host,
