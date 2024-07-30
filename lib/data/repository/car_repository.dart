@@ -1,6 +1,6 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-import '../models/car_model.dart';
+import 'dart:convert'; // do object json and manipulate json
+import 'package:http/http.dart' as http; // do http request
+import '../models/car_model.dart'; // import model car
 
 class CarRepository {
   final String apiUrl;
@@ -8,10 +8,11 @@ class CarRepository {
 
   CarRepository({required this.apiUrl, required this.apiKey});
 
+
   Future<void> createCar(CarModel car) async {
     final response = await http.post(
       Uri.parse('$apiUrl/cars'),
-      headers: <String, String>{
+       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
         'x-api-key': apiKey,
       },
